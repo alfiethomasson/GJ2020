@@ -561,9 +561,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  angrySpeed: 15
+  alive: 1
   isAngry: 0
   direction: -1
+  health: {fileID: 439531431}
 --- !u!61 &510749631
 BoxCollider2D:
   m_ObjectHideFlags: 0
