@@ -47,6 +47,12 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    void Update() {
+        if (isAngry) {
+
+            StartCoroutine(Boom());
+        }
+    }
 
     // Update is called once per frame
 
@@ -82,7 +88,15 @@ public class EnemyController : MonoBehaviour
                 result.Normalize();
                 direction = result.x;
                 yield return null;
+                if (!alive) { break; }
             }
         }  
+    }
+
+    IEnumerator Boom() {
+        yield return new WaitForSeconds(1);
+        //explode
+        alive = false;
+        direction = 0.0f;
     }
 }
