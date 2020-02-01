@@ -91,12 +91,21 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(velocity * Time.deltaTime);
 
-        if(velocity.x == 0)
+        if(velocity.x < 0 && !isFlipped)
         {
-        //    anim.SetTrigger("isWalking");
-         //   anim.SetTrigger("isIdle");
-            currentanim = false;
+             Vector3 newScale = transform.localScale;
+            newScale.x *= -1;
+            transform.localScale = newScale;
+            isFlipped = true;
         }
+        else if(velocity.x > 0 && isFlipped)
+        {
+    Vector3 newScale = transform.localScale;
+            newScale.x *= -1;
+            transform.localScale = newScale;
+            isFlipped = false;
+        }
+
 
       // Debug.Log(canJump);
 
