@@ -55,7 +55,8 @@ public class PlayerController : MonoBehaviour
 
 
     void FixedUpdate() {
-        
+
+
       //  Debug.Log(grounded);
 
         if(grounded)
