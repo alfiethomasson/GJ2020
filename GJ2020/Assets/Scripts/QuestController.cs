@@ -12,10 +12,20 @@ public class QuestController : MonoBehaviour
     public TextMeshProUGUI text;
 
 
+    void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.layer == 11)
+        {
+            if (QuestCounter < 8)
+            {
+                QuestCounter++;
+            }
+            else
+            {
+                QuestCounter = 0;
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            text.text = "Quest progress updated to: " + QuestCounter;
+        }
     }
+        
 }
