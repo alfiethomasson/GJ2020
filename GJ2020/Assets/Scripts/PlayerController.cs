@@ -10,11 +10,16 @@ public class PlayerController : MonoBehaviour
 
     public CanvasGroup canvasGroup;
 
+
     private bool canvActive = false;
    // [SerializeField] private Inventory inventory;
 
      Rigidbody2D rb;
     public float jumpSpeed = 10.0f;
+
+    public static int health = 100;
+
+    public static int maxHealth = 100;
 
     public float speed = 10.0f;
 
@@ -43,8 +48,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void UpdateHealth(int newHealth)
+    {
+        health = newHealth;
+    }
+
+
     void FixedUpdate() {
-        
+
+
       //  Debug.Log(grounded);
 
         if(grounded)
@@ -52,14 +64,14 @@ public class PlayerController : MonoBehaviour
 
             velocity.y = 0.0f;
 
-        if(Input.GetButton("Vertical"))
-        {
-            Debug.Log("Jump button pressed");
+            if(Input.GetButton("Vertical"))
+            {
+                Debug.Log("Jump button pressed");
           //  rb.AddForce(new Vector2(0.0f, jumpForce));#
        //     velocity.y = Mathf.Sqrt(2 * jumpSpeed * Mathf.Abs(Physics2D.gravity.y));
-            velocity.y = jumpSpeed;
-            grounded = false;
-        }
+                velocity.y = jumpSpeed;
+                grounded = false;
+            }
         }
 
         float horInput = Input.GetAxisRaw("Horizontal");
@@ -113,6 +125,7 @@ public class PlayerController : MonoBehaviour
             //InvCanvas.gameObject.SetActive(canvActive); // d
 
        }
+       
 
     }
 

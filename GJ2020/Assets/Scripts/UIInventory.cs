@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UIInventory : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class UIInventory : MonoBehaviour
     public GameObject slotPrefab;
     public Transform slotPanel;
     public int numberofslots = 16;
+    public TextMeshProUGUI text;
 
     private void Awake() {
         for(int i = 0; i < numberofslots; i++)
@@ -28,6 +31,7 @@ public class UIInventory : MonoBehaviour
     public void AddNewItem(Item item)
     {
         Debug.Log("Item in Add new Item to UI = " + item.name);
+        text.text = "Found Item: " + item.name;
         UpdateSlot(uiItems.FindIndex(i => i.item == null), item);
     }
 
