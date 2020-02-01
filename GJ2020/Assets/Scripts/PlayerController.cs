@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Transform groundCheck;
 
+    public CanvasGroup canvasGroup;
+
+    private bool canvActive = false;
+   // [SerializeField] private Inventory inventory;
+
      Rigidbody2D rb;
     public float jumpSpeed = 10.0f;
 
@@ -90,9 +95,25 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+
+    void Update() {
+
+       if(Input.GetButtonDown("Inventory"))
+       {
+           canvActive = !canvActive; // change the state of your bool
+           if(canvActive)
+           {
+           canvasGroup.alpha = 1.0f;
+           }
+           else if(!canvActive)
+           {
+              canvasGroup.alpha = 0.0f;
+           }
+        //   InvPanel.GetComponent<Renderer>.enabled = canvActive;
+            //InvCanvas.gameObject.SetActive(canvActive); // d
+
+       }
 
     }
+
 }

@@ -8,17 +8,18 @@ public class Inventory : MonoBehaviour
 
    [SerializeField] private ItemDB itemDB;
 
-   public UIInventory inventoryUI;
+  public UIInventory inventoryUI;
 
     private void Start()
     {
-        GiveItem("Spare Part");
+       // GiveItem("Spare Part");
      //   RemoveItem("Spare Part");
     }
 
    public void GiveItem(int id)
    {
        Item toAdd = itemDB.GetItem(id);
+       Debug.Log("Adding item " + toAdd.name);
        characterItems.Add(toAdd);
        inventoryUI.AddNewItem(toAdd);
        Debug.Log("Added item: " + toAdd.name);
@@ -27,9 +28,10 @@ public class Inventory : MonoBehaviour
     public void GiveItem(string name)
    {
        Item toAdd = itemDB.GetItem(name);
+          Debug.Log("Adding item " + toAdd.name);
        characterItems.Add(toAdd);
-    inventoryUI.AddNewItem(toAdd);
-       Debug.Log("Added item: " + toAdd.name);
+         inventoryUI.AddNewItem(toAdd);
+           Debug.Log("Added item: " + toAdd.name);
    }
 
    public Item CheckForItem(int id)
@@ -63,4 +65,15 @@ public class Inventory : MonoBehaviour
            Debug.Log("Removed item: " + item.name);
        }
    }
+
+    
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.layer == 9)
+        {
+           GiveItem(col.gameObject.name);
+           col.gameObject.SetActive(false);
+        }
+    }
+
 }
