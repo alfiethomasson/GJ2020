@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public static int maxHealth = 100;
 
-
+    public bool currentanim;
 
     public float speed = 10.0f;
 
