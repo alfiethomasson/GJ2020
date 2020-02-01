@@ -9,7 +9,7 @@ public class Item
  public string description;
  public Sprite icon;
 
-public Item(int id, string name, string description, Sprite icon)
+public Item(int id, string name, string description)
 {
     this.id = id;
     this.name = name;

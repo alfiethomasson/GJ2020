@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
         
-        Debug.Log(grounded);
+      //  Debug.Log(grounded);
 
         if(grounded)
         {
