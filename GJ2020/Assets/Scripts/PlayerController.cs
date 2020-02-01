@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
 
     bool isFlipped = false;
+
+    public AudioSource footsteps;
+
+    bool soundPlay = true;
+
      
     void Awake() {
         
@@ -52,6 +57,7 @@ public class PlayerController : MonoBehaviour
 
        mask = LayerMask.GetMask("Environment");
        velocity = new Vector2(0.0f, 0.0f);
+       StartCoroutine(SoundWait());
 
     //   anim.GetComponent<Animator>();
 
@@ -85,6 +91,21 @@ public class PlayerController : MonoBehaviour
 
         float horInput = Input.GetAxisRaw("Horizontal");
         //velocity.x = Mathf.MoveTowards(velocity.x, speed * horInput, walkAcc * Time.deltaTime);
+
+        if(horInput != 0)
+        {
+            Debug.Log("should play");
+        //    if(soundPlay)
+         //   {
+             if(soundPlay)
+             {
+            footsteps.Play();
+            soundPlay = false;
+             }
+
+        }
+
+
             anim.SetFloat("Speed", horInput);
 
         velocity.x = speed * horInput;
@@ -152,6 +173,16 @@ public class PlayerController : MonoBehaviour
 
        }
        
+
+    }
+
+    IEnumerator SoundWait()
+    {
+        while(true)
+        {
+           yield return new WaitForSeconds(0.5f);
+           soundPlay = true;
+        }
 
     }
 

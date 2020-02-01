@@ -10,7 +10,7 @@ public class ItemDB : MonoBehaviour
     // Start is called before the first frame update
    void BuildDB()
    {
-       items = new List<Item>(){ new Item(0, "Spare Part", "A rusty old part from a long forgotten era.")};
+       items = new List<Item>(){ new Item(0, "Spare Part", "A rusty old part from a long forgotten era."), new Item(1, "Cog", "You know what really grinds my gears?"), new Item(2, "Screw", "Ah, Screw it."), new Item(2, "NutsAndBolts", "You'd be nuts not too.")};
     //   Debug.Log(items.Find(item => item.id == 0).name);
    }
 
