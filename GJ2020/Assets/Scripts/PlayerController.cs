@@ -17,9 +17,12 @@ public class PlayerController : MonoBehaviour
      Rigidbody2D rb;
     public float jumpSpeed = 10.0f;
 
+
     public static int health = 100;
 
     public static int maxHealth = 100;
+
+
 
     public float speed = 10.0f;
 
@@ -32,6 +35,10 @@ public class PlayerController : MonoBehaviour
      LayerMask mask;
      
      private bool grounded = false;
+
+    public Animator anim;
+
+    bool isFlipped = false;
      
     void Awake() {
         
@@ -45,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
        mask = LayerMask.GetMask("Environment");
        velocity = new Vector2(0.0f, 0.0f);
+
+    //   anim.GetComponent<Animator>();
 
     }
 
@@ -76,11 +85,19 @@ public class PlayerController : MonoBehaviour
 
         float horInput = Input.GetAxisRaw("Horizontal");
         //velocity.x = Mathf.MoveTowards(velocity.x, speed * horInput, walkAcc * Time.deltaTime);
+            anim.SetFloat("Speed", horInput);
+
         velocity.x = speed * horInput;
 
         transform.Translate(velocity * Time.deltaTime);
 
-        
+        if(velocity.x == 0)
+        {
+        //    anim.SetTrigger("isWalking");
+         //   anim.SetTrigger("isIdle");
+            currentanim = false;
+        }
+
       // Debug.Log(canJump);
 
         if(!grounded)
