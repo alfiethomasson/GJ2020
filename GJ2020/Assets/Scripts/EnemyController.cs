@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
 
     public float speed = 5.0f;
+    public bool alive = true;
     public float angrySpeed = 15.0f;
     public bool isAngry = false;
     public float direction = 1.0f;
@@ -63,23 +64,25 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator AI()
     {
-        while (true) {
-
-            if (!isAngry)
+        while (alive) {
+            while (!isAngry)
             {
+
+                yield return new WaitForSeconds(1);
+                yield return null;
                 direction = -direction;
                 Vector3 newScale = transform.localScale;
                 newScale.x *= -1;
                 transform.localScale = newScale;
-                yield return new WaitForSeconds(1);
+
             }
-            else {
-                Vector2 result = transform.position - player.transform.position;
+
+            while (isAngry) {
+                Vector2 result = player.transform.position - transform.position ;
                 result.Normalize();
                 direction = result.x;
+                yield return null;
             }
-        }
-        
-
+        }  
     }
 }
