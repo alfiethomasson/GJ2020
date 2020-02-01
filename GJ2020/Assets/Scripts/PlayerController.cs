@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource footsteps;
 
+    public AudioSource jump;
+
     bool soundPlay = true;
 
      
@@ -85,28 +87,29 @@ public class PlayerController : MonoBehaviour
           //  rb.AddForce(new Vector2(0.0f, jumpForce));#
        //     velocity.y = Mathf.Sqrt(2 * jumpSpeed * Mathf.Abs(Physics2D.gravity.y));
                 velocity.y = jumpSpeed;
+                anim.SetBool("isJump", true);
+                jump.Play();
                 grounded = false;
             }
         }
 
         float horInput = Input.GetAxisRaw("Horizontal");
+        //float verInput = transform.position.y;
         //velocity.x = Mathf.MoveTowards(velocity.x, speed * horInput, walkAcc * Time.deltaTime);
 
-        if(horInput != 0)
+        if(horInput != 0 && grounded)
         {
-            Debug.Log("should play");
-        //    if(soundPlay)
-         //   {
+          //  Debug.Log("should play");
              if(soundPlay)
              {
             footsteps.Play();
             soundPlay = false;
              }
-
         }
 
 
-            anim.SetFloat("Speed", horInput);
+        anim.SetFloat("Speed", horInput);
+        //anim.SetFloat("Height")
 
         velocity.x = speed * horInput;
 
@@ -139,6 +142,7 @@ public class PlayerController : MonoBehaviour
             {
                 if(colliders[i].gameObject != gameObject)
                 {
+                    anim.SetBool("isJump", false);
                     grounded = true;
                 }                   
             }
@@ -180,7 +184,7 @@ public class PlayerController : MonoBehaviour
     {
         while(true)
         {
-           yield return new WaitForSeconds(0.5f);
+           yield return new WaitForSeconds(0.4f);
            soundPlay = true;
         }
 
