@@ -11,7 +11,8 @@ public class EnemyController : MonoBehaviour
     public bool isAngry = false;
     public float direction = 1.0f;
     private GameObject player;
-    
+    public HealthController health;
+
     Vector2 velocity;
 
     Rigidbody2D rb;
@@ -51,6 +52,7 @@ public class EnemyController : MonoBehaviour
         if (isAngry) {
 
             StartCoroutine(Boom());
+            
         }
     }
 
@@ -96,6 +98,11 @@ public class EnemyController : MonoBehaviour
     IEnumerator Boom() {
         yield return new WaitForSeconds(1);
         //explode
+        float dist = (player.transform.position - transform.position).magnitude;
+        if (dist <= 2.5f) {
+            health.OnDamage(20);
+        }
+        Destroy(gameObject);
         alive = false;
         direction = 0.0f;
     }
