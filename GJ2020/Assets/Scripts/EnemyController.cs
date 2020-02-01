@@ -7,8 +7,9 @@ public class EnemyController : MonoBehaviour
 
     public float speed = 5.0f;
     public float angrySpeed = 15.0f;
-    bool isAngry = false;
+    public bool isAngry = false;
     public float direction = 1.0f;
+    private GameObject player;
     
     Vector2 velocity;
 
@@ -26,6 +27,7 @@ public class EnemyController : MonoBehaviour
     {
         velocity = new Vector2(0.0f, 0.0f);
         StartCoroutine(AI());
+        player = GameObject.Find("Player");
     }
 
     void FixedUpdate()
@@ -46,8 +48,16 @@ public class EnemyController : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isAngry) {
+            if (collision.gameObject.layer == 13)
+            {
+                isAngry = true;
+            }
+        }
         
     }
 
@@ -57,11 +67,16 @@ public class EnemyController : MonoBehaviour
 
             if (!isAngry)
             {
-                yield return new WaitForSeconds(1);
                 direction = -direction;
                 Vector3 newScale = transform.localScale;
                 newScale.x *= -1;
                 transform.localScale = newScale;
+                yield return new WaitForSeconds(1);
+            }
+            else {
+                Vector2 result = transform.position - player.transform.position;
+                result.Normalize();
+                direction = result.x;
             }
         }
         
