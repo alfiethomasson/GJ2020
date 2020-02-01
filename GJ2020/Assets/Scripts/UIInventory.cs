@@ -20,11 +20,14 @@ public class UIInventory : MonoBehaviour
 
     public void UpdateSlot(int slot, Item item)
     {
+        Debug.Log("slot is " + slot);
+        Debug.Log("item is " + item.name);
         uiItems[slot].UpdateItem(item);
     }
 
     public void AddNewItem(Item item)
     {
+        Debug.Log("Item in Add new Item to UI = " + item.name);
         UpdateSlot(uiItems.FindIndex(i => i.item == null), item);
     }
 

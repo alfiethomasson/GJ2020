@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         GiveItem("Spare Part");
-        RemoveItem("Spare Part");
+     //   RemoveItem("Spare Part");
     }
 
    public void GiveItem(int id)

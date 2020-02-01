@@ -8,6 +8,8 @@ public class UIItem : MonoBehaviour
     public Item item;
     private Image spriteImage;
 
+    //public Sprite player;
+
    private void Awake() 
    {
 
@@ -21,6 +23,7 @@ public class UIItem : MonoBehaviour
         this.item = item;
         if(this.item != null)
         {
+            Debug.Log("SHOULD UPDATE PICTURE");
             spriteImage.color = Color.white;
             spriteImage.sprite = this.item.icon;
         }
