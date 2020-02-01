@@ -6,10 +6,13 @@ public class EnemyController : MonoBehaviour
 {
 
     public float speed = 5.0f;
+    public bool alive = true;
     public float angrySpeed = 15.0f;
-    bool isAngry = false;
+    public bool isAngry = false;
     public float direction = 1.0f;
-    
+    private GameObject player;
+    public HealthController health;
+
     Vector2 velocity;
 
     Rigidbody2D rb;
@@ -26,6 +29,7 @@ public class EnemyController : MonoBehaviour
     {
         velocity = new Vector2(0.0f, 0.0f);
         StartCoroutine(AI());
+        player = GameObject.Find("Player");
     }
 
     void FixedUpdate()
@@ -44,27 +48,62 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    void Update() {
+        if (isAngry) {
+
+            StartCoroutine(Boom());
+            
+        }
+    }
 
     // Update is called once per frame
-    void Update()
+
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isAngry) {
+            if (collision.gameObject.layer == 13)
+            {
+                isAngry = true;
+            }
+        }
         
     }
 
     IEnumerator AI()
     {
-        while (true) {
-
-            if (!isAngry)
+        while (alive) {
+            while (!isAngry)
             {
+
                 yield return new WaitForSeconds(1);
+                yield return null;
                 direction = -direction;
                 Vector3 newScale = transform.localScale;
                 newScale.x *= -1;
                 transform.localScale = newScale;
-            }
-        }
-        
 
+            }
+
+            while (isAngry) {
+                Vector2 result = player.transform.position - transform.position ;
+                result.Normalize();
+                direction = result.x;
+                yield return null;
+                if (!alive) { break; }
+            }
+        }  
+    }
+
+    IEnumerator Boom() {
+        yield return new WaitForSeconds(1);
+        //explode
+        float dist = (player.transform.position - transform.position).magnitude;
+        if (dist <= 2.5f) {
+            health.OnDamage(20);
+        }
+        Destroy(gameObject);
+        alive = false;
+        direction = 0.0f;
     }
 }
