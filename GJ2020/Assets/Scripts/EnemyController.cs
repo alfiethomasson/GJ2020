@@ -7,7 +7,6 @@ public class EnemyController : MonoBehaviour
 
     public float speed = 5.0f;
     public bool alive = true;
-    public float angrySpeed = 15.0f;
     public bool isAngry = false;
     public float direction = 1.0f;
     private GameObject player;
@@ -34,13 +33,9 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isAngry) {
-            velocity.x = (angrySpeed*direction);
-        }
-        else
-        {
-            velocity.x = (speed*direction);
-        }
+        
+        velocity.x = (speed*direction);
+        
 
        
         transform.Translate(velocity * Time.deltaTime);
@@ -50,7 +45,7 @@ public class EnemyController : MonoBehaviour
 
     void Update() {
         if (isAngry) {
-
+            speed = 15.0f;
             StartCoroutine(Boom());
             
         }
@@ -90,7 +85,6 @@ public class EnemyController : MonoBehaviour
                 result.Normalize();
                 direction = result.x;
                 yield return null;
-                if (!alive) { break; }
             }
         }  
     }
@@ -99,11 +93,9 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(1);
         //explode
         float dist = (player.transform.position - transform.position).magnitude;
-        if (dist <= 2.5f) {
+        if (dist <= 3) {
             health.OnDamage(20);
         }
         Destroy(gameObject);
-        alive = false;
-        direction = 0.0f;
     }
 }
