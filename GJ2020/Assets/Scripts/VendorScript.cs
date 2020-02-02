@@ -20,19 +20,19 @@ public class VendorScript : MonoBehaviour
     public void AddItem(string name)
    {
        Item toAdd = itemDB.GetItem(name);
-       Debug.Log("Adding item " + toAdd.name);
+       //Debug.Log("Adding item " + toAdd.name);
      //  characterItems.Add(toAdd);
        inventoryUI.AddNewItem(toAdd);
-       Debug.Log("Added item: " + toAdd.name);
+    //   Debug.Log("Added item: " + toAdd.name);
    }
 
    public void AddItem(int id)
    {
        Item toAdd = itemDB.GetItem(id);
-       Debug.Log("Adding item " + toAdd.name);
+       //Debug.Log("Adding item " + toAdd.name);
      //  characterItems.Add(toAdd);
        inventoryUI.AddNewItem(toAdd);
-       Debug.Log("Added item: " + toAdd.name);
+      // Debug.Log("Added item: " + toAdd.name);
    }
 
    int[] whatItems()
