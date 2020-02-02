@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 5526119410aa25746ba39c29fd59b84d
   - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 501a7ef3df20c114e95ef5e01ce4d02d
+  - enabled: 1
     path: Assets/Scenes/Brother Hub.unity
     guid: 925c287a1c744a94a88c1cef61e0e063
   - enabled: 1
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alfie.unity
     guid: 5c666671ada33df43bfaae6e6b0111bd
-  - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: 501a7ef3df20c114e95ef5e01ce4d02d
   m_configObjects: {}
