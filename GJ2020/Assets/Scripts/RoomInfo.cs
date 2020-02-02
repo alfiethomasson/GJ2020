@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class RoomInfo : MonoBehaviour
 {
-    public Vector3 spawn;
+    public float CamSize;
 }

@@ -4,15 +4,49 @@ using UnityEngine;
 
 public class ForwardRoom : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    public GameObject lc;
+
+    public GameObject player;
+
+    public Camera mainCam;
     void Start()
     {
-        
+
+        //player = GameObject.FindWithTag("Player");
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+ //       Debug.Log
+        if(player.GetComponent<PlayerController>().EnterTrigger)
+        {
+        Debug.Log("Entered forward update");
+        LevelCreator levelc = lc.GetComponent<LevelCreator>();
+        int next = levelc.getNextRoom();
+        Debug.Log("Next room: " + next);
+        GameObject nextRoom = levelc.levels[next];
+        Debug.Log("Actual next room is: " + nextRoom.name);
+        Vector3 nextSpawn = nextRoom.transform.Find("Spawn").transform.position;
+        float extradistance = next * levelc.distancebetweenlevels;
+        nextSpawn.x += extradistance;
+        Debug.Log("Next spawn: " + nextSpawn);
+        player.transform.position = nextSpawn;
+
+        Vector3 camSpawn = levelc.levels[next].transform.position;
+        camSpawn.x +=extradistance;
+        camSpawn.z = -10.0f;
+        mainCam.transform.position = camSpawn;
+        RoomInfo roominfo = nextRoom.GetComponent<RoomInfo>();
+        mainCam.orthographicSize = roominfo.CamSize;
+
+        levelc.visitedLevels.Add(levelc.levels[next]);
+        levelc.levels.Remove(levelc.levels[next]);
+
+        player.GetComponent<PlayerController>().EnterTrigger = false;
+        }
+
     }
+
 }

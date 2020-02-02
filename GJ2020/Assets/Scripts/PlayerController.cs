@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public static int maxHealth = 100;
 
     public bool currentanim;
+
+    public bool EnterTrigger;
 
     public float speed = 10.0f;
 
@@ -190,4 +192,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.name == "Forward")
+        {
+            Debug.Log("Entered Forward");
+            EnterTrigger = true;
+        }
+    }
+
 }
+
