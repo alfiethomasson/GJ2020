@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     public bool alive = true;
     public bool isAngry = false;
     public float direction = 1.0f;
@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
     void Update() {
         if (isAngry) {
             anim.SetTrigger("isAngry");
-            speed = 15.0f;
+            speed = 30.0f;
             StartCoroutine(Boom());
             
         }
@@ -74,13 +74,13 @@ public class EnemyController : MonoBehaviour
             while (!isAngry)
             {
 
-                yield return new WaitForSeconds(1);
+                
                 yield return null;
                 direction = -direction;
                 Vector3 newScale = transform.localScale;
                 newScale.x *= -1;
                 transform.localScale = newScale;
-
+                yield return new WaitForSeconds(1);
             }
 
             while (isAngry) {
@@ -96,7 +96,7 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(1);
         //explode
         float dist = (player.transform.position - transform.position).magnitude;
-        if (dist <= 3) {
+        if (dist <= 9) {
             health.OnDamage(20);
         }
         Destroy(gameObject);
