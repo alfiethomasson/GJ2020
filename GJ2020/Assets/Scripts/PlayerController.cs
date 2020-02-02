@@ -75,9 +75,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
 
-        Debug.Log(grounded);
+       // Debug.Log(grounded);
 
-        if(isGrounded())
+        if(isGrounded() || grounded)
         {
 
             velocity.y = 0.0f;
@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("isJump", true);
                 jump.Play();
                 grounded = false;
+                
             }
         }
 
@@ -212,6 +213,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Entered Backward");
             EnterTriggerBack = true;
             
+        }
+        else if(col.gameObject.tag == "Floor")
+        {
+            grounded = true;
         }
     }
 
