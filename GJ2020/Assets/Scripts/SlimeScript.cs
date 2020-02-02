@@ -46,15 +46,17 @@ public class SlimeScript : MonoBehaviour
             yield return new WaitForSeconds(2);
             Vector3 playerDir = player.transform.position - transform.position;
             //playerDir.Normalize();
+            if (playerDir.magnitude < 20) {
+                if (Physics.Raycast(transform.position, playerDir, out hit, 20, layermask)) ;
+                {
 
-            if (Physics.Raycast(transform.position, playerDir, out hit, 20, layermask)) ;
-            {
-
-                Debug.DrawRay(transform.position, playerDir, Color.green);
-                GameObject b = Instantiate(bullet, bulletpos, transform.rotation);
-                playerDir.Normalize();
-                b.GetComponent<Rigidbody2D>().velocity = playerDir*6.0f;
+                    Debug.DrawRay(transform.position, playerDir, Color.green);
+                    GameObject b = Instantiate(bullet, bulletpos, transform.rotation);
+                    playerDir.Normalize();
+                    b.GetComponent<Rigidbody2D>().velocity = playerDir * 6.0f;
+                }
             }
+            
         }
     }
 
