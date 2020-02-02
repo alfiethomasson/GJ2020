@@ -307,25 +307,10 @@ PrefabInstance:
       propertyPath: canvasGroup
       value: 
       objectReference: {fileID: 831163689}
-    - target: {fileID: 3442073796365534022, guid: 5b870a0f5bca9de4d8d5709f18934264,
-        type: 3}
-      propertyPath: jumpSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442073796365534022, guid: 5b870a0f5bca9de4d8d5709f18934264,
-        type: 3}
-      propertyPath: speed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 3442073796365534073, guid: 5b870a0f5bca9de4d8d5709f18934264,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442073796365534073, guid: 5b870a0f5bca9de4d8d5709f18934264,
-        type: 3}
-      propertyPath: m_Layer
-      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b870a0f5bca9de4d8d5709f18934264, type: 3}
@@ -438,12 +423,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1767144964}
-    - target: {fileID: 6091183297014907599, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
-        type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 5862973261742015936, guid: 39c0206688bcd8c4cb6fcc3f600ae2c9,
-        type: 3}
     - target: {fileID: 6091183297014907600, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -499,35 +478,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6091183297014907600, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091183297014907600, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.487
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091183297014907602, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.21343732
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091183297014907602, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 5.4115825
-      objectReference: {fileID: 0}
     - target: {fileID: 6091183297014907604, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
         type: 3}
       propertyPath: m_Name
       value: GooMonster
-      objectReference: {fileID: 0}
-    - target: {fileID: 6091183297014907604, guid: 78abc90186d4ed84c9c3829ec9ce8abf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78abc90186d4ed84c9c3829ec9ce8abf, type: 3}
@@ -656,31 +610,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7480412882155055281, guid: aacc4f4e768e135459aa7c821fead5a6,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480412882155055281, guid: aacc4f4e768e135459aa7c821fead5a6,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480412882155055281, guid: aacc4f4e768e135459aa7c821fead5a6,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480412882155055281, guid: aacc4f4e768e135459aa7c821fead5a6,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480412882155055281, guid: aacc4f4e768e135459aa7c821fead5a6,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7480412882616568145, guid: aacc4f4e768e135459aa7c821fead5a6,
         type: 3}
       propertyPath: m_Name
