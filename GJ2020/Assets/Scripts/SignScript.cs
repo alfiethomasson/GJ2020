@@ -12,7 +12,7 @@ public class SignScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 13)
         {
-            SceneManager.LoadScene("Game Scene");
+            SceneManager.LoadScene("GameScene");
         }
 
 
