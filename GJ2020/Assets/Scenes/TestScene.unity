@@ -1024,6 +1024,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3442073796365534073, guid: 5b870a0f5bca9de4d8d5709f18934264,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b870a0f5bca9de4d8d5709f18934264, type: 3}
 --- !u!1001 &129071309663565325
@@ -1478,6 +1483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106500645638701138, guid: 911f743fb8c8f0a4388a4cd1cdd4f6dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6106500645638701142, guid: 911f743fb8c8f0a4388a4cd1cdd4f6dc,
         type: 3}
