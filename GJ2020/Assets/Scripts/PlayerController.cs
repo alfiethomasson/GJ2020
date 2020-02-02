@@ -77,12 +77,10 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log(grounded);
 
-        if(grounded)
+        if(isGrounded())
         {
 
             velocity.y = 0.0f;
-
-
 
             if(Input.GetButton("Vertical"))
             {
@@ -100,7 +98,7 @@ public class PlayerController : MonoBehaviour
         //float verInput = transform.position.y;
         //velocity.x = Mathf.MoveTowards(velocity.x, speed * horInput, walkAcc * Time.deltaTime);
 
-        if(horInput != 0 && grounded)
+        if(horInput != 0 && velocity.y == 0.0f)
         {
           //  Debug.Log("should play");
              if(soundPlay)
@@ -136,19 +134,26 @@ public class PlayerController : MonoBehaviour
 
       // Debug.Log(canJump);
 
-        if(!grounded)
+       /* if(!grounded)
         {
        //     RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 0.5f, mask);
             	Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.8f, mask);
 
             for(int i = 0; i < colliders.Length; i++)
             {
+                     // Draw a yellow sphere at the transform's position
+       // Gizmos.color = Color.yellow;
+        //Gizmos.DrawSphere(groundCheck.position, 2.0f);
+                Debug.Log(colliders[i]);
                 if(colliders[i].gameObject != gameObject)
+                {*/
+                if(velocity.y == 0 )
                 {
                     anim.SetBool("isJump", false);
-                    grounded = true;
-                }                   
-            }
+                }
+                  //  grounded = true;
+               // }                   
+         //   }
 
             /*
             if(hit.collider != null)
@@ -157,7 +162,9 @@ public class PlayerController : MonoBehaviour
                // Debug.Log("Setting jump to true");
                 canJump = true;
             }*/
-        }
+        
+        
+
 
     }
 
@@ -208,5 +215,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-}
+    bool isGrounded() {
+        Vector2 position = transform.position;
+        Vector2 direction = Vector2.down;
+        float distance = 10.0f;
+
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, 15);
+        if (hit.collider != null) {
+           return true;
+        }
+    
+        return false;
+    }
+} 
+
+
 

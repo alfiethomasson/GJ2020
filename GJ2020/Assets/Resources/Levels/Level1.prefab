@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lc: {fileID: 206313036040002927, guid: 29d04048dd5b7d24a856356d4f432917, type: 3}
-  player: {fileID: 3442073796365534073, guid: 5b870a0f5bca9de4d8d5709f18934264, type: 3}
+  player: {fileID: 6400464585197300567, guid: 80242e7ef24efdf448b763a30591f26d, type: 3}
   mainCam: {fileID: 7007037924433554255, guid: bfa814110ca42e74d938028368b47cad, type: 3}
   link: -1
 --- !u!1001 &423943314757661298
