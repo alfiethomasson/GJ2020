@@ -14,6 +14,8 @@ public class LevelCreator : MonoBehaviour
     public float distancebetweenlevels = 200.0f;
       int prefabSize;
 
+     public GameObject lastLevel;
+
     void Start() {
         
         DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Levels");
@@ -33,6 +35,8 @@ public class LevelCreator : MonoBehaviour
             levels.Add(newLevel);
         }
 
+       lastLevel = Resources.Load<GameObject>("Levels/FinalScene");
+
     //    string firstpart = "part" + firstnum.ToString();
         float totalx = 0.0f;;
       //  float furthestpoint = 0.0f;
@@ -46,6 +50,7 @@ public class LevelCreator : MonoBehaviour
                Instantiate(levels[r], new Vector3(totalx, 0.0f, 0.0f), Quaternion.identity);
                totalx += distancebetweenlevels;
         }    
+        Instantiate(lastLevel, new Vector3(totalx, 0.0f, 0.0f), Quaternion.identity);
     }
 
     public int getNextRoom()

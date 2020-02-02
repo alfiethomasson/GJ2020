@@ -16,16 +16,16 @@ public class SlimeScript : MonoBehaviour
     {       
         Vector3 playerDir = player.transform.position - transform.position;
 
-        if(Physics.Raycast(transform.position, playerDir, out hit, 50.0f));
-        {
-            Debug.DrawRay(transform.position, playerDir, Color.green);
+     //   if(Physics.Raycast(transform.position, playerDir, out hit, 50.0f));
+      //  {
+           // Debug.DrawRay(transform.position, playerDir, Color.green);
           //  if(hit.collider != null)
            // {
-            if(hit.gameObject.tag == "Player")
-            {
-                Debug.Log("working");
-            }
+          //  if(hit.gameObject.tag == "Player")
+           // {
+           //     Debug.Log("working");
            // }
-        }
+           // }
+       // }
     }
 }

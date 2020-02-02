@@ -43,12 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0fa7c32425c57428b894ee236a6fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 1432861289632313476, guid: 3ee820fc7830b384ab30ffc1993738ec, type: 3}
-  - {fileID: 250152703040248886, guid: 49b5d47fd726f0d4a9d9302132e5df25, type: 3}
-  - {fileID: 250152703040248886, guid: 49b5d47fd726f0d4a9d9302132e5df25, type: 3}
-  - {fileID: 250152703040248886, guid: 49b5d47fd726f0d4a9d9302132e5df25, type: 3}
-  - {fileID: 250152703040248886, guid: 49b5d47fd726f0d4a9d9302132e5df25, type: 3}
+  levels: []
   noLevels: 5
   visitedLevels: []
   distancebetweenlevels: 200
+  lastLevel: {fileID: 0}

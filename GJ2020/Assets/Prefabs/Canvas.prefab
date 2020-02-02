@@ -89,6 +89,11 @@ MonoBehaviour:
   uiItems: []
   slotPrefab: {fileID: 7793411497498725012, guid: a95a8c7878202d14e95181e7076936ef,
     type: 3}
+  Brother1: {fileID: 633524517040129939, guid: de939c01e7bd80740b327709376cf0d0, type: 3}
+  Brother2: {fileID: 7931151377020170128, guid: 69bc057cff66791438dcccee3f6eb9b8,
+    type: 3}
+  Brother3: {fileID: 973563716756629382, guid: 20c73d14f6174dc46aa7439ddaf8da8a, type: 3}
+  BrotherSlotPanel: {fileID: 8562792483236273313}
   slotPanel: {fileID: 8562792483236273313}
   numberofslots: 16
   text: {fileID: 0}

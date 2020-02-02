@@ -16,10 +16,17 @@ public class HealthController : MonoBehaviour
     private static int health = 100;
     private static int maxHealth = 100;
 
+    AudioSource damage;
+
+    void Start()
+    {
+        damage = GetComponent<AudioSource>();
+    }
+
     public void OnDamage(int damage) {
 
         health = health - damage;
-
+      //  damage.Play();
         text.text = health + "/" + maxHealth;
         player.UpdateHealth(health);
         GUIUpdate();

@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
 
     public Animator anim;
 
+    AudioSource audioSource;
+
     void Awake()
     {
 
@@ -31,6 +33,7 @@ public class EnemyController : MonoBehaviour
         velocity = new Vector2(0.0f, 0.0f);
         StartCoroutine(AI());
         player = GameObject.Find("Player");
+        audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()

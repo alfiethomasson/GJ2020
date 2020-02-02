@@ -75,7 +75,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
 
-
         Debug.Log(grounded);
 
         if(grounded)
@@ -140,7 +139,7 @@ public class PlayerController : MonoBehaviour
         if(!grounded)
         {
        //     RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 0.5f, mask);
-            	Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, mask);
+            	Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.8f, mask);
 
             for(int i = 0; i < colliders.Length; i++)
             {

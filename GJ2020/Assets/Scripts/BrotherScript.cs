@@ -29,8 +29,8 @@ public class BrotherScript : MonoBehaviour
     {
         Debug.Log("Adding 3 items");
         AddItem("Cog");
-        AddItem("Screw");    
-        AddItem("NutsAndBolts");
+        AddItem("NutsAndBolts");    
+        AddItem("CarBattery");
 
         audio = GetComponent<AudioSource>();    
     }
