@@ -275,12 +275,12 @@ PrefabInstance:
     - target: {fileID: 7007037924433554254, guid: bfa814110ca42e74d938028368b47cad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -297.9
+      value: -299.4
       objectReference: {fileID: 0}
     - target: {fileID: 7007037924433554254, guid: bfa814110ca42e74d938028368b47cad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.9
+      value: 14.2
       objectReference: {fileID: 0}
     - target: {fileID: 7007037924433554254, guid: bfa814110ca42e74d938028368b47cad,
         type: 3}
@@ -1066,7 +1066,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.27868652
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1390,11 +1390,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400464585197300563, guid: 80242e7ef24efdf448b763a30591f26d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400464585197300563, guid: 80242e7ef24efdf448b763a30591f26d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6400464585197300566, guid: 80242e7ef24efdf448b763a30591f26d,
         type: 3}
       propertyPath: canvasGroup
       value: 
       objectReference: {fileID: 483812943}
+    - target: {fileID: 6400464585197300566, guid: 80242e7ef24efdf448b763a30591f26d,
+        type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6400464585197300567, guid: 80242e7ef24efdf448b763a30591f26d,
         type: 3}
       propertyPath: m_Name
