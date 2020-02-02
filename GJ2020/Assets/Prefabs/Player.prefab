@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 3442073796365534018}
   - component: {fileID: 3442073796365534019}
   - component: {fileID: 3442073796365534016}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -252,11 +252,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 3442073798030892352}
   canvasGroup: {fileID: 0}
-  jumpSpeed: 10
+  jumpSpeed: 15
   currentanim: 0
   EnterTrigger: 0
   EnterTriggerBack: 0
-  speed: 40
+  speed: 20
   walkAcc: 1.2
   anim: {fileID: 3442073796365534016}
   footsteps: {fileID: 3442073796614525560}
