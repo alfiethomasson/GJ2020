@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class LevelCreator : MonoBehaviour
 {
     public List<GameObject> levels;
+
+    public int noLevels;
+
     public List<GameObject> visitedLevels;
 
     Component[] children;
@@ -18,9 +22,20 @@ public class LevelCreator : MonoBehaviour
     public float distancebetweenlevels = 200.0f;
 
     void Start() {
-
-        int first = Random.Range(0, 4);        
         
+        DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Levels");
+        FileInfo[] info = dir.GetFiles("*.prefab");
+        int prefabSize = info.Length;
+       
+
+        for(int i = 0; i < noLevels - 1; i++)
+        {         
+
+            int rand = Random.Range(0, prefabSize - 1);
+            GameObject newLevel = Resources.Load<GameObject>("Levels/Level" + rand.ToString());
+            levels.Add(newLevel);
+        }
+
     //    string firstpart = "part" + firstnum.ToString();
         float totalx = 0.0f;;
       //  float furthestpoint = 0.0f;

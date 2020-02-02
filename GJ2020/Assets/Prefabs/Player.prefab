@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3442073796365534016}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3442073796365534073}
   m_LocalRotation: {x: 0, y: 0, z: 0.000017414575, w: 1}
   m_LocalPosition: {x: 3.3013594, y: 1.0146655, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 3442073798030892352}
   - {fileID: 3442073796614525563}
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &3442073796365534022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +125,14 @@ MonoBehaviour:
   groundCheck: {fileID: 3442073798030892352}
   canvasGroup: {fileID: 0}
   jumpSpeed: 10
-  speed: 5
+  currentanim: 0
+  EnterTrigger: 0
+  EnterTriggerBack: 0
+  speed: 40
   walkAcc: 1.2
   anim: {fileID: 3442073796365534016}
   footsteps: {fileID: 3442073796614525560}
+  jump: {fileID: 0}
 --- !u!61 &3442073796365534018
 BoxCollider2D:
   m_ObjectHideFlags: 0

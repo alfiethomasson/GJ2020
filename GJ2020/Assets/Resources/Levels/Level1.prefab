@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &68933786269873941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 372464392311534746}
+  m_Layer: 0
+  m_Name: SpawnBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &372464392311534746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68933786269873941}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.7, y: -3.4, z: -4.9900627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1722537116484799795}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432861289632313476
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,6 +65,7 @@ Transform:
   - {fileID: 5351286407135184038}
   - {fileID: 3064719754151556253}
   - {fileID: 5690536655162833907}
+  - {fileID: 372464392311534746}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CamSize: 17
+  roomNo: 0
 --- !u!1 &6483717563192272997
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6483717563192272997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17, y: -4.8, z: -31.695312}
+  m_LocalPosition: {x: -19.5, y: -4.6, z: -31.695312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1722537116484799795}
@@ -148,8 +180,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5351286407135184038}
   - component: {fileID: 113159541863105068}
+  - component: {fileID: 6592839203008110465}
   m_Layer: 0
-  m_Name: NextRoomCollider
+  m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9168562196457655373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.23, y: -5.77, z: -16.284706}
+  m_LocalPosition: {x: 19.6, y: -5.6, z: -16.284706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1722537116484799795}
@@ -195,6 +228,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4.09552}
   m_EdgeRadius: 0
+--- !u!114 &6592839203008110465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9168562196457655373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22da9db174b46148ac9197dba40e070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lc: {fileID: 206313036040002927, guid: 29d04048dd5b7d24a856356d4f432917, type: 3}
+  player: {fileID: 3442073796365534073, guid: 5b870a0f5bca9de4d8d5709f18934264, type: 3}
+  mainCam: {fileID: 7007037924433554255, guid: bfa814110ca42e74d938028368b47cad, type: 3}
+  link: -1
 --- !u!1001 &1246212728035949425
 PrefabInstance:
   m_ObjectHideFlags: 0

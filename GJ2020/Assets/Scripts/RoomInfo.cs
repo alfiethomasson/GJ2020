@@ -5,4 +5,5 @@ using UnityEngine;
 public class RoomInfo : MonoBehaviour
 {
     public float CamSize;
+    public int roomNo;
 }
