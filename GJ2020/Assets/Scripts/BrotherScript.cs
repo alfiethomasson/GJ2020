@@ -21,12 +21,18 @@ public class BrotherScript : MonoBehaviour
 
     public Inventory playerInv;
 
+   // public AudioClip hammer;
+
+    AudioSource audio;
+
     void Start()
     {
         Debug.Log("Adding 3 items");
         AddItem("Cog");
         AddItem("Screw");    
         AddItem("NutsAndBolts");
+
+        audio = GetComponent<AudioSource>();    
     }
 
     public void AddItem(string name)
@@ -64,6 +70,7 @@ public class BrotherScript : MonoBehaviour
                 {
                     if (newItem.name == "Screw" && brother1.GetComponent<Image>().color != Color.green)
                     {
+                        audio.Play();
                         brother1.GetComponent<Image>().color = Color.green;
                     }
                 }
@@ -71,6 +78,7 @@ public class BrotherScript : MonoBehaviour
                 {
                     if (newItem1.name == "Cog" && brother2.GetComponent<Image>().color != Color.green)
                     {
+                            audio.Play();
                         brother2.GetComponent<Image>().color = Color.green;
                     }
                 }
@@ -78,6 +86,7 @@ public class BrotherScript : MonoBehaviour
                 {
                     if (newItem2.name == "NutsAndBolts" && brother3.GetComponent<Image>().color != Color.green)
                     {
+                          audio.Play();
                         brother3.GetComponent<Image>().color = Color.green;
                     }
                 }
