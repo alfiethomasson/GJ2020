@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 5875068581139658056}
   - component: {fileID: 3923738593062239224}
   - component: {fileID: 3787629605297420193}
+  - component: {fileID: 138394535}
   m_Layer: 10
   m_Name: Brother
   m_TagString: Untagged
@@ -257,6 +258,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &138394535
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3713812357351232381}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7519767706230338126
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,13 +552,14 @@ GameObject:
   - component: {fileID: 3717567730965322622}
   - component: {fileID: 6189011533793126123}
   - component: {fileID: 8554168928070109586}
+  - component: {fileID: 274161171}
   m_Layer: 5
   m_Name: Vendor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5266841759126447488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -627,3 +641,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &274161171
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566194720386009586}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

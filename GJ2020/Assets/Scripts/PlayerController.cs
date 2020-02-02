@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
             velocity.y = 0.0f;
 
-            if(Input.GetButton("Vertical"))
+            if(Input.GetButtonDown("Vertical"))
             {
                 Debug.Log("Jump button pressed");
           //  rb.AddForce(new Vector2(0.0f, jumpForce));#

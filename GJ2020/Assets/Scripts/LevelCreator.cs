@@ -7,17 +7,9 @@ public class LevelCreator : MonoBehaviour
 {
     public List<GameObject> levels;
 
-    public int noLevels;
+    public int noLevels = 5;
 
     public List<GameObject> visitedLevels;
-
-    Component[] children;
-
-    FurthestPoint fp;
-    int firstnum = 0;
-    int secondnum = 1;
-
-    int[] randnums;
 
     public float distancebetweenlevels = 200.0f;
 
@@ -28,11 +20,15 @@ public class LevelCreator : MonoBehaviour
         int prefabSize = info.Length;
        
 
-        for(int i = 0; i < noLevels - 1; i++)
+        for(int i = 1; i < noLevels + 1; i++)
         {         
 
-            int rand = Random.Range(0, prefabSize - 1);
-            GameObject newLevel = Resources.Load<GameObject>("Levels/Level" + rand.ToString());
+            /*Debug.Log("ON iteration: " + i.ToString());
+
+            int rand = getRand(prefabSize - 1);
+            Debug.Log("prefab size = " + prefabSize);
+            Debug.Log("Should create a level " + rand.ToString());*/
+            GameObject newLevel = Resources.Load<GameObject>("Levels/Level" + i.ToString());
             levels.Add(newLevel);
         }
 
@@ -42,25 +38,25 @@ public class LevelCreator : MonoBehaviour
        // float halfpoint = 0.0f;
        // float furthestpoint2 = 0.0f;
 
-        Instantiate(levels[0], new Vector3(totalx, 0.0f, 0.0f), Quaternion.identity);
-        totalx += distancebetweenlevels;
-        Instantiate(levels[1], new Vector3(totalx , 0.0f, 0.0f), Quaternion.identity);
-        totalx += distancebetweenlevels;
-        Instantiate(levels[2], new Vector3(totalx, 0.0f, 0.0f), Quaternion.identity);
-        totalx += distancebetweenlevels;
-        Instantiate(levels[3], new Vector3(totalx , 0.0f, 0.0f), Quaternion.identity);
-        totalx += distancebetweenlevels;
-        Instantiate(levels[4], new Vector3(totalx , 0.0f, 0.0f), Quaternion.identity);
-        Debug.Log("Spawned last level at: " + totalx);
-        totalx += distancebetweenlevels;
-    
+        Debug.Log("How many in levels: " + levels.Count);
 
+        for(int r = 0; r < noLevels; r++)
+        {
+               Instantiate(levels[r], new Vector3(totalx, 0.0f, 0.0f), Quaternion.identity);
+               totalx += distancebetweenlevels;
+        }    
     }
 
     public int getNextRoom()
     {
         int next = Random.Range(0, levels.Count - 1);
         return next;
+    }
+
+    public int getRand(int rangemax)
+    {
+        int randnum = Random.Range(0, rangemax);
+        return randnum;
     }
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3785601212109356442}
   - component: {fileID: 3785601212109356441}
   - component: {fileID: 3785601212109356447}
-  - component: {fileID: 3785601212109356443}
+  - component: {fileID: 346906476}
   m_Layer: 0
   m_Name: Brother
   m_TagString: Untagged
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 23.54834, y: 16.888454}
   m_EdgeRadius: 0
---- !u!114 &3785601212109356443
+--- !u!114 &346906476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,5 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d923a3ec10c3b42bbc9e4090f732e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brotherCanvas: {fileID: 0}
   isActive: 0
+  itemDB: {fileID: 0}
+  inventoryUI: {fileID: 0}
+  brotherCanvasGroup: {fileID: 0}
+  brother1: {fileID: 633524517040129939, guid: de939c01e7bd80740b327709376cf0d0, type: 3}
+  brother2: {fileID: 7931151377020170128, guid: 69bc057cff66791438dcccee3f6eb9b8,
+    type: 3}
+  brother3: {fileID: 973563716756629382, guid: 20c73d14f6174dc46aa7439ddaf8da8a, type: 3}
+  playerInv: {fileID: 0}
