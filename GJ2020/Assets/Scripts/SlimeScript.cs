@@ -8,21 +8,24 @@ public class SlimeScript : MonoBehaviour
 
     public GameObject player;
 
+        RaycastHit hit;
+
 
     // Update is called once per frame
     void Update()
-    {
-        RaycastHit hit;
-        
+    {       
         Vector3 playerDir = player.transform.position - transform.position;
 
         if(Physics.Raycast(transform.position, playerDir, out hit, 50.0f));
         {
             Debug.DrawRay(transform.position, playerDir, Color.green);
-            if(hit.collider.name == "Player")
+          //  if(hit.collider != null)
+           // {
+            if(hit.gameObject.tag == "Player")
             {
                 Debug.Log("working");
             }
+           // }
         }
     }
 }
