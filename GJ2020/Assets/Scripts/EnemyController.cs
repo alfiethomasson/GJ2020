@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public Animator anim;
+
     void Awake()
     {
 
@@ -45,6 +47,7 @@ public class EnemyController : MonoBehaviour
 
     void Update() {
         if (isAngry) {
+            anim.SetTrigger("isAngry");
             speed = 15.0f;
             StartCoroutine(Boom());
             

@@ -76,14 +76,16 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() {
 
 
-      //  Debug.Log(grounded);
+        Debug.Log(grounded);
 
         if(grounded)
         {
 
             velocity.y = 0.0f;
 
-            if(Input.GetButtonDown("Vertical"))
+
+
+            if(Input.GetButton("Vertical"))
             {
                 Debug.Log("Jump button pressed");
           //  rb.AddForce(new Vector2(0.0f, jumpForce));#

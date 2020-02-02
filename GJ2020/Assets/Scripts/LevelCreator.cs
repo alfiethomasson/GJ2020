@@ -12,12 +12,13 @@ public class LevelCreator : MonoBehaviour
     public List<GameObject> visitedLevels;
 
     public float distancebetweenlevels = 200.0f;
+      int prefabSize;
 
     void Start() {
         
         DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Levels");
         FileInfo[] info = dir.GetFiles("*.prefab");
-        int prefabSize = info.Length;
+        prefabSize = info.Length;
        
 
         for(int i = 1; i < noLevels + 1; i++)
@@ -49,7 +50,7 @@ public class LevelCreator : MonoBehaviour
 
     public int getNextRoom()
     {
-        int next = Random.Range(0, levels.Count - 1);
+        int next = Random.Range(1, prefabSize);
         return next;
     }
 

@@ -147,6 +147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rust
       objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -222,6 +227,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3161973823875400788}
     m_Modifications:
+    - target: {fileID: 799760496345624423, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2640471006509943268, guid: 80b92fc030a50dd478aa783b73f47ae3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -286,6 +296,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RustBig4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715370487277313100, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481850980741595857, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824830855321159707, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008330897610853625, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7349345290859832749, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370716150794920271, guid: 80b92fc030a50dd478aa783b73f47ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b92fc030a50dd478aa783b73f47ae3, type: 3}
@@ -376,6 +416,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RustBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802376075859211311, guid: ef45cc8712118bc4f87a5d3c6730be33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455798206067882503, guid: ef45cc8712118bc4f87a5d3c6730be33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495192938576477925, guid: ef45cc8712118bc4f87a5d3c6730be33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef45cc8712118bc4f87a5d3c6730be33, type: 3}
@@ -472,6 +527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rust (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -547,6 +607,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rust (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -621,6 +686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rust (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
@@ -795,6 +865,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rust (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -869,6 +944,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rust (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
@@ -950,6 +1030,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rust (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1024,6 +1109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rust (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
@@ -1105,6 +1195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rust (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1179,6 +1274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rust (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831280792863505151, guid: 5731a454b9f8e944aa4677cd58971055,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5527793060040075874, guid: 5731a454b9f8e944aa4677cd58971055,
         type: 3}
