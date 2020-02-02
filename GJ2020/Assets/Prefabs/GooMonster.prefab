@@ -142,5 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c2efc4585c0c0449553b3fe579495b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 6400464585197300567, guid: 80242e7ef24efdf448b763a30591f26d, type: 3}
   bullet: {fileID: 5862973261742015936, guid: 39c0206688bcd8c4cb6fcc3f600ae2c9, type: 3}
