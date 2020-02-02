@@ -8,7 +8,7 @@ public class PlayButton : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("Will2");
+        SceneManager.LoadScene("Brother Hub");
     }
 
 }
