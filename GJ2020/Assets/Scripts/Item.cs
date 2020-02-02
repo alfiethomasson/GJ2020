@@ -15,6 +15,7 @@ public Item(int id, string name, string description)
     this.name = name;
     this.description = description;
     this.icon = Resources.Load<Sprite>("Sprites/Items/" + name);
+  //  this.icon.localScale *= 2.0f;
 }
 public Item(Item item)
 {

@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VendorScript : MonoBehaviour
+public class BrotherScript : MonoBehaviour
 {
+
+    public bool isActive;
+
+
     [SerializeField] private ItemDB itemDB;
 
   public UIInventory inventoryUI;
 
-     public bool isActive;
-
-     public CanvasGroup vendorCanvasGroup;
+     public CanvasGroup brotherCanvasGroup;
 
     void Start()
     {
-        ResetShop();
+        Debug.Log("Adding 3 items");
+        AddItem("Cog");
+        AddItem("Screw");    
+        AddItem("NutsAndBolts");
     }
 
     public void AddItem(string name)
@@ -35,27 +40,6 @@ public class VendorScript : MonoBehaviour
        Debug.Log("Added item: " + toAdd.name);
    }
 
-   int[] whatItems()
-   {
-       int item = Random.Range(0, 3);
-       int item1 = Random.Range(0, 3);
-       int item2 = Random.Range(0, 3);
-       int[] items = {item, item1, item2};
-       return items;
-   }
-
-   void ResetShop()
-   {
-       int[] items = whatItems();
-       AddItem("SpeedPowerUp");
-       AddItem(items[0]);
-       AddItem("Health Increase");
-       AddItem(items[1]);
-       AddItem("Wings");
-       AddItem(items[2]);
-
-   }
-
     void OnTriggerStay2D(Collider2D col)
     {
         if(col.transform.tag == "Player")
@@ -63,15 +47,15 @@ public class VendorScript : MonoBehaviour
             if(Input.GetButtonDown("Interact"))
             {
                 isActive = !isActive;
-                if(isActive)
-                {
-                    vendorCanvasGroup.alpha = 1.0f;
-                }
-                else if (!isActive)
-                {
-                    vendorCanvasGroup.alpha = 0.0f;
-                }
-               // vendorCanvas.SetActive(isActive);
+               // brotherCanvas.SetActive(isActive);
+               if(isActive)
+               {
+                   brotherCanvasGroup.alpha = 1.0f;
+               }
+               else if(!isActive)
+               {
+                   brotherCanvasGroup.alpha = 0.0f;
+               }
             }
         }
     }

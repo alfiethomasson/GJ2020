@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ecdfc2de9d1894bb1c1c75d111605c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CamSize: 0
+  CamSize: 33
   roomNo: 0
 --- !u!1001 &477626100254367389
 PrefabInstance:
