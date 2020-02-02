@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,12 +17,14 @@ public class PlayerController : MonoBehaviour
      Rigidbody2D rb;
     public float jumpSpeed = 10.0f;
 
-
     public static int health = 100;
 
     public static int maxHealth = 100;
 
     public bool currentanim;
+
+    public bool EnterTrigger = false;
+    public bool EnterTriggerBack = false;
 
     public float speed = 10.0f;
 
@@ -81,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
             velocity.y = 0.0f;
 
-            if(Input.GetButton("Vertical"))
+            if(Input.GetButtonDown("Vertical"))
             {
                 Debug.Log("Jump button pressed");
           //  rb.AddForce(new Vector2(0.0f, jumpForce));#
@@ -190,4 +192,20 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.name == "Forward")
+        {
+            Debug.Log("Entered Forward");
+            EnterTrigger = true;
+        }
+        else if(col.gameObject.name == "Backward")
+        {
+            Debug.Log("Entered Backward");
+            EnterTriggerBack = true;
+            
+        }
+    }
+
 }
+
